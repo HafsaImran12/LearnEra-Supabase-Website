@@ -1,18 +1,16 @@
-# 🎓 Student Management System
+# 🎓 Student Portal
 
-A responsive Student Management System built with **HTML, CSS, Bootstrap 5, JavaScript, and Supabase**.
+A responsive student portal website built with **HTML, CSS, Bootstrap 5, JavaScript, and Supabase**.
 
 ## ✨ Features
 
 * 🔐 User Sign Up & Login
 * 👤 User Dashboard
-* 📧 Display User Email & ID
-* 👨‍🎓 Add Student
-* ✏️ Edit Student
-* 🗑️ Delete Student
-* 📋 Display Student Data
-* 🔔 SweetAlert Notifications
+* 📧 User Profile Information
+* 🔑 Supabase Authentication
+* 🗄️ Supabase Database Integration
 * 📱 Responsive Design
+* 🔔 SweetAlert Notifications
 
 ## 🛠️ Technologies
 
