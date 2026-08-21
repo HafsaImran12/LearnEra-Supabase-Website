@@ -1,14 +1,50 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+body {
+  width: 100%;
+}
+
+:root {
+  --yellow: #ffc107;
+  --dark-yellow: #f4c12b;
+}
+
+/* ----- SIGNUP ----- */
+
 .card-registration .select-input.form-control[readonly]:not([disabled]) {
-    font-size: 1rem;
-    line-height: 2.15;
-    padding-left: .75em;
-    padding-right: .75em;
+  font-size: 1rem;
+  line-height: 2.15;
+  padding-left: 0.75em;
+  padding-right: 0.75em;
 }
 
 .card-registration .select-arrow {
-    top: 13px;
+  top: 13px;
+}
+
+
+/* ----- COSTUM ----- */
+
+#submitBtn:active {
+  background-color: var(--dark-yellow);
+}
+
+.redInput {
+  border: 1px solid red !important;
+  box-shadow: 0 0 0 0.25rem rgba(255, 0, 0, 0.2) !important;
+  transition:
+    border-color 0.15s ease-in-out,
+    box-shadow 0.15s ease-in-out !important;
+}
+
+#navbar {
+  box-shadow: 0 0 18px rgba(0, 0, 0, 0.05) !important;
+}
+
+#activeDashboard {
+  background-color: var(--yellow);
 }

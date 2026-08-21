@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student dashboard</title>
+    <link rel="shortcut icon" href="../images/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="../bootstrap.css" />
+    <link rel="stylesheet" href="../style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+      integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="d-flex">
+
+      <!-- ==================== SIDEBAR ==================== -->
+
+      <div class="bg-light d-lg-flex d-none min-vh-100">
+        <div
+          class="d-flex flex-column flex-shrink-0 p-3 bg-white min-vh-100 "
+          style="width: 280px"
+        >
+          <h3 class="d-flex align-items-center m-0">
+            <img
+              src="../images/logo.png"
+              alt="Logo"
+              width="60"
+              height="54"
+              class="d-inline-block align-text-top"
+            />Learn <span class="text-warning">Era</span>
+          </h3>
+          <hr />
+          <ul class="nav nav-pills flex-column mb-auto">
+            <li class="nav-item">
+              <a
+                href="#"
+                class="nav-link text-black"
+                id="activeDashboard"
+                aria-current="page"
+              >
+                <i class="fa-regular fa-house" style="color: rgb(0, 0, 0)"></i>
+                Dashboard
+              </a>
+            </li>
+            <li>
+              <a href="#" class="nav-link link-dark">
+                <i
+                  class="fa-solid fa-book-open"
+                  style="color: rgb(0, 0, 0)"
+                ></i>
+                My Course
+              </a>
+            </li>
+            <li>
+              <a href="#" class="nav-link link-dark">
+                <i
+                  class="fa-regular fa-clipboard"
+                  style="color: rgb(0, 0, 0)"
+                ></i>
+                Assignment
+              </a>
+            </li>
+            <li>
+              <a href="#" class="nav-link link-dark">
+                <i
+                  class="fa-regular fa-circle-question"
+                  style="color: rgb(0, 0, 0)"
+                ></i>
+                Quiz
+              </a>
+            </li>
+            <li>
+              <a href="#" class="nav-link link-dark">
+                <i class="fa-solid fa-gear" style="color: rgb(0, 0, 0)"></i>
+                Settings
+              </a>
+            </li>
+          </ul>
+          <hr />
+          <!-- user id -->
+          <div class="dropdown">
+            <a
+              href="#"
+              class="d-flex align-items-center link-dark text-decoration-none dropdown-toggle"
+              id="dropdownUser2"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <!-- user profile icon large screen -->
+              <div
+                width="32"
+                height="32"
+                class="rounded-circle me-2 p-2 bg-warning firstLetter"
+              >
+                H
+              </div>
+              <div>
+                <bold class="userName"><i class="fa-regular fa-user" style="color: rgb(0, 0, 0);"></i></bold>
+                <p class="userEmail"></p>
+              </div>
+            </a>
+            <ul
+              class="dropdown-menu text-small shadow"
+              aria-labelledby="dropdownUser2"
+            >
+              <li>
+                <a class="dropdown-item text-danger signOut" href="../index.html"
+                  >Logout</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+       <!-- ==================== RIGHTSIDE ==================== -->
+
+      <div class="flex-grow-1 bg-light">
+
+        <!-- ==================== NAVBAR ==================== -->
+
+        <nav class="navbar bg-body py-3">
+          <div class="container-fluid">
+            <!-- Mobile -->
+            <div
+              class="d-flex d-lg-none align-items-center justify-content-between w-100"
+            >
+              <!-- Logo -->
+              <h5 class="d-flex align-items-center m-0">
+                <img
+                  src="../images/logo.png"
+                  alt="Logo"
+                  width="45"
+                  height="40"
+                  class="me-1"
+                />
+
+                Learn <span class="text-warning">Era</span>
+              </h5>
+
+              <!-- Profile -->
+              <div class="dropdown">
+                <button
+                  class="btn btn-warning rounded-circle firstLetter p-0"
+                  type="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  style="width: 40px; height: 40px"
+                ></button>
+
+                <ul class="dropdown-menu dropdown-menu-end">
+                  <li>
+                    <p class="dropdown-item userName mb-0"></p>
+                  </li>
+
+                  <li>
+                    <p class="dropdown-item userEmail mb-0"></p>
+                  </li>
+
+                  <li>
+                    <a
+                      class="dropdown-item text-danger signOut"
+                      id="signOut"
+                      href="../index.html"
+                    >
+                      Logout
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Desktop Search -->
+            <div class="d-none d-lg-block w-50 mx-auto">
+              <input
+                class="form-control"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+            </div>
+          </div>
+        </nav>
+         <!-- ==================== HERO ==================== -->
+
+        <div class="container col-xxl-8 py-5">
+          <div
+            class="row flex-lg-row-reverse align-items-center justify-content-center g-5 w-100"
+          >
+            <div class="col-10 col-sm-8 col-lg-6">
+              <img
+                src="../images/formImg.png"
+                class="d-block mx-lg-auto img-fluid"
+                alt="Bootstrap Themes"
+                width="700"
+                height="500"
+                loading="lazy"
+              />
+            </div>
+            <div class="col-lg-6 text-center text-lg-start">
+              <h3>Welcome Back,</h3>
+              <h2 class="display-5 fw-bold lh-1 mb-3" id="user"></h2>
+              <p class="lead text-secondary fw-medium">
+                Keep learning, keep growing.
+              </p>
+            </div>
+          </div>
+        </div>
+
+         <!-- ==================== RECOMMENDATION ==================== -->
+
+        <div class="container" id="course">
+          <h3 class="pb-3">Recomemded For You</h3>
+          <div class="row row-cols-2 row-cols-md-4 g-4 pb-5">
+            <!-- web development -->
+            <div class="col">
+              <div class="card h-100 pt-4 text-center">
+                <img
+                  src="../images/webDev.png"
+                  class="card-img-top w-50 mx-auto"
+                  alt="Web Development"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Web Development</h5>
+                  <p class="card-text">HTML, CSS, Javascript</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- data science -->
+            <div class="col">
+              <div class="card h-100 pt-4 text-center">
+                <img
+                  src="../images/dataScience.png"
+                  class="card-img-top w-50 mx-auto"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Data Science</h5>
+                  <p class="card-text">Python For Beginner</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- UI/UX Design -->
+            <div class="col">
+              <div class="card h-100 pt-4 text-center">
+                <img
+                  src="../images/ui-uxDesign.png"
+                  class="card-img-top w-50 mx-auto"
+                  alt="UI/UX Design"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">UI/UX Design</h5>
+                  <p class="card-text">Figma, Adobe XD</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- digital marketing -->
+            <div class="col">
+              <div class="card h-100 pt-4 text-center">
+                <img
+                  src="../images/digitalMarketing.png"
+                  class="card-img-top w-50 mx-auto"
+                  alt="Digital Marketing"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Digital Marketing</h5>
+                  <p class="card-text">Social Media Marketing</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BOOTSTRAP JS -->
+    <script src="../bootstrap.js"></script>
+
+    <!-- SUPABASE CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <!-- SWEETALERT JS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- SUPABASE JS -->
+    <script src="../supabase.js"></script>
+
+    <!--  HOME JS -->
+    <script src="../js/home.js"></script>
+  </body>
+</html>
