@@ -14,13 +14,14 @@ async function userData() {
 
   const { data: studentData, error } = await client
     .from("students_data")
-    .select("firstname, lastname")
+    .select("firstname, lastname, course")
     .eq("user_id", user.id)
     .single();
 
   if (studentData) {
     console.log(studentData.firstname);
     console.log(studentData.lastname);
+    console.log(studentData.course);
   } else {
     console.log(error);
   }
@@ -42,6 +43,23 @@ async function userData() {
   firstLetter.forEach((letter) => {
     letter.innerHTML = `${studentData.firstname[0]}${studentData.lastname[0]}`;
   });
+
+  // show course
+
+  const userCourse = document.querySelector(".course");
+  userCourse.innerHTML = `${studentData.course}`;
+
+  const courseImg = document.querySelector(".courseImg");
+
+  if (studentData.course === "Web Development") {
+    courseImg.src = "../images/webDev.png";
+  } else if (studentData.course === "Data Science") {
+    courseImg.src = "../images/dataScience.png";
+  } else if (studentData.course === "UI/UX Design") {
+    courseImg.src = "../images/ui-uxDesign.png";
+  } else if (studentData.course === "Digital Marketing") {
+    courseImg.src = "../images/digitalMarketing.png";
+  }
 }
 
 userData();
